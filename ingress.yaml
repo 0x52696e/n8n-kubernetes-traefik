@@ -5,7 +5,7 @@ metadata:
 spec:
   tls: {certResolver: le}
   routes:
-  - match: Host(`automate.rin.digital`)
+  - match: Host(`your.domain.com`)
     kind: Rule
     services:
     - name: n8n
