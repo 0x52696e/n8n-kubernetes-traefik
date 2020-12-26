@@ -1,0 +1,12 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: n8n
+spec:
+  tls: {certResolver: le}
+  routes:
+  - match: Host(`automate.rin.digital`)
+    kind: Rule
+    services:
+    - name: n8n
+      port: 80
